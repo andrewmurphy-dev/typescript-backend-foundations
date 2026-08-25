@@ -1,0 +1,27 @@
+what version of typescript are we running?
+TypeScript 7.0.2.
+
+
+
+how do we check?
+
+npx tsc --version
+
+
+C++                         TypeScript
+
+clang++ main.cpp -o app  ≈  npx tsc
+./app                    ≈  node app.js
+
+
+
+
+TypeScript is normally two steps:
+
+npx tsc
+node app.js
+
+Meaning:
+
+1. Compile/check the TypeScript
+2. Run the JavaScript output
