@@ -1,0 +1,18 @@
+For **Week 1, Day 1**, the plan is:
+
+1. What TypeScript is
+2. What a `.ts` file is
+3. `const`
+4. `let`
+5. `string`
+6. `number`
+7. `boolean`
+8. `console.log()`
+9. A few short exercises using only those topics
+10. End with a quick review
+
+We **do not** move into `if/else`, functions, arrays, objects, or anything from Day 2+ today.
+
+We had just finished explaining the Day 1 topics and were about to start **Exercise 1**.
+
+
