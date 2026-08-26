@@ -1,0 +1,15 @@
+1. Write TypeScript
+   topic_1.ts
+
+2. Compile
+   npx tsc
+
+3. TypeScript checks your code
+
+4. JavaScript is created in dist/
+
+5. Run the JavaScript
+   node "dist/week 1/day 2/topic_1.js"
+
+
+   

@@ -1,0 +1,41 @@
+npm init -y
+npm install --save-dev typescript
+npx tsc --init
+
+// this is how u install typescript ! 
+
+
+
+//makes these files 
+package.json
+package-lock.json
+node_modules/
+tsconfig.json
+
+
+what happened was when u ran npx tsc , typescript compiler made loads of files , !
+
+so solution is u need to change the tsconfig.json
+
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+    "module": "nodenext",
+    "target": "es2022",
+    "strict": true,
+    "sourceMap": false,
+    "declaration": false,
+    "declarationMap": false,
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
+
+//then .gitignre contains 
+
+node_modules/
+dist/

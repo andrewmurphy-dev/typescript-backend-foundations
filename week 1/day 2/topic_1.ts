@@ -15,10 +15,21 @@ const bonus: number = 15;
 
 //question 1
 
-let baseDamage: number = 125;
-let criticalBonus: number = 75;
+const baseDamage: number = 125;
+const criticalBonus: number = 75;
 
-let Total_damage = baseDamage + criticalBonus 
+const Total_damage = baseDamage + criticalBonus;
 
 console.log("Total damage: ", Total_damage)
 
+
+
+// question 2 
+
+
+const gold: number = 2500;
+const itemPrice: number = 675;
+
+const result = gold - itemPrice;
+
+console.log("Gold remaining: ", result);
