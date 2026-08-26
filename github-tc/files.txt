@@ -1,0 +1,7 @@
+.ts = code YOU write
+
+npx tsc = check + compile
+
+.js = code TypeScript generates
+
+node file.js = actually run the program
