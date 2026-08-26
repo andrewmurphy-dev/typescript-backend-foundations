@@ -1,0 +1,45 @@
+Day 2 stays exactly on the roadmap.
+
+### Day 2 — Operators + Conditions
+
+1. **Arithmetic operators**
+
+   * `+`
+   * `-`
+   * `*`
+   * `/`
+   * `%`
+
+2. **Comparison operators**
+
+   * `>`
+   * `<`
+   * `>=`
+   * `<=`
+   * `===`
+   * `!==`
+
+3. **`if`**
+
+   * run code only when a condition is true
+
+4. **`else`**
+
+   * run different code when the condition is false
+
+5. **`else if`**
+
+   * check multiple conditions
+
+6. **Small coding questions**
+
+   * simple number comparisons
+   * game-style examples
+   * price/level/temperature examples
+
+7. **End-of-Day 2 review**
+
+   * short questions
+   * one combined coding exercise
+
+That’s it. **No arrays, no functions, no objects, no `type` aliases today.**

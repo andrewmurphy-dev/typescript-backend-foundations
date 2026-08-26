@@ -1,0 +1,16 @@
+you compile typescript maily to turn it into javascript 
+
+
+topic_1.ts
+   ↓
+npx tsc
+   ↓
+TypeScript checks your code
+   ↓
+creates JavaScript
+   ↓
+topic_1.js
+   ↓
+node topic_1.js
+   ↓
+program runs
