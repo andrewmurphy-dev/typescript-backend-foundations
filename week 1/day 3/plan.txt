@@ -1,0 +1,46 @@
+DAY 3 — FUNCTIONS
+
+Topic 1
+- What a function is
+- Creating a function
+- Calling a function
+
+Topic 2
+- Parameters
+- Parameter types
+
+Topic 3
+- Multiple parameters
+
+Topic 4
+- return
+- Returning values
+
+Topic 5
+- Return types
+- number
+- string
+- boolean
+- void
+
+Topic 6
+- Functions with if / else
+
+Topic 7
+- Hard coding practice
+- Damage calculator
+- Purchase checker
+- Level checker
+- Boss health calculator
+
+Topic 8
+- End-of-day review
+- Mixed function questions
+- One hard final challenge
+
+NO:
+- arrays
+- objects
+- interfaces
+- generics
+- async

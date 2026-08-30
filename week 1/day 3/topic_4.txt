@@ -1,0 +1,32 @@
+//return 
+
+
+
+//exactly like python ! 
+
+
+def add(a, b):
+    return a + b
+
+result = add(10, 5)
+
+print(result)
+
+
+
+
+//typescript ! 
+
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+const result = add(10, 5);
+
+console.log(result);
+
+
+
+return   → stops the WHOLE function
+break    → stops only the loop
+continue → skips to the next loop iteration
