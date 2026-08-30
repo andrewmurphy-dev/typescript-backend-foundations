@@ -1,0 +1,71 @@
+//return types ! 
+
+
+
+
+//1. number 
+
+
+
+
+function getLevel(): number {
+    return 10;
+}
+
+const level = getLevel();
+
+console.log(level);
+
+
+This is valid because 10 is a number.
+
+
+
+//2.　string
+
+function getPlayerName(): string {
+    return "Andy";
+}
+
+const playerName = getPlayerName();
+
+console.log(playerName);
+
+
+This function must return text.
+
+
+
+//3. boolean 
+
+
+function isAlive(): boolean {
+    return true;
+}
+
+const alive = isAlive();
+
+console.log(alive);
+
+
+true or false 
+
+
+
+//4. void
+
+
+function greet(): void {
+    console.log("Hello");
+}
+
+
+This function does something, but it does not return a value.
+
+
+:number  → returns a number
+:string  → returns text
+:boolean → returns true/false
+:void    → returns nothing
+
+
