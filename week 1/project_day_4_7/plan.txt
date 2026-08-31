@@ -1,0 +1,65 @@
+WEEK 1 — DAYS 4–7 MINI PROJECT
+ML MODEL EVALUATOR
+
+DAY 4 — Prediction Logic
+- prediction score
+- threshold
+- positive / negative prediction
+- functions
+- parameters
+- return values
+- booleans
+- if / else
+
+Build:
+- predict()
+- getPredictionLabel()
+- isHighConfidence()
+
+DAY 5 — Classification Results
+- actual result vs predicted result
+- true positive
+- true negative
+- false positive
+- false negative
+- harder conditional logic
+- functions calling functions
+
+Build:
+- isCorrectPrediction()
+- getPredictionResult()
+- getErrorType()
+
+DAY 6 — Model Metrics
+- accuracy
+- precision
+- recall
+- percentages
+- arithmetic inside functions
+- multiple parameters
+- return numbers
+
+Build:
+- calculateAccuracy()
+- calculatePrecision()
+- calculateRecall()
+
+DAY 7 — Full Mini Project
+Combine everything into one ML evaluator.
+
+Example output:
+
+=== MODEL EVALUATION ===
+
+Prediction score: 0.82
+Threshold: 0.50
+Prediction: POSITIVE
+Actual: POSITIVE
+Result: TRUE POSITIVE
+
+Accuracy: 87%
+Precision: 82%
+Recall: 91%
+
+FINAL CHALLENGE:
+Build the evaluator mostly by yourself using everything from Week 1.
