@@ -1,0 +1,56 @@
+//Your program evaluates one binary ML prediction.
+//build 3 functions 
+
+
+
+
+
+
+
+function predict(score: number, threshold: number): boolean {
+
+    if (score >= threshold) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+
+function getPredictionLabel(prediction: boolean): string {
+    if (prediction === true) {
+        return "POSITIVE";
+    } else {
+        return "NEGATIVE";
+    }
+}
+
+
+
+function isHighConfidence(score: number): boolean {
+    let confidence: number = 0.80;
+    if (score >= confidence) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+const predictionScore: number = 0.82;
+const threshold: number = 0.50;
+const prediction = predict(predictionScore, threshold);
+const labelPrediction = getPredictionLabel(prediction);
+const scoreConfidence = isHighConfidence(predictionScore);
+
+
+console.log("=== MODEL PREDICTION ===");
+console.log("Prediction score:", predictionScore);
+console.log("Threshold:", threshold);
+console.log("Prediction:", labelPrediction);
+console.log("High confidence:", scoreConfidence);
+
+
+
