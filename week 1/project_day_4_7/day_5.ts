@@ -5,6 +5,7 @@ function isCorrectPrediction(prediction: boolean, actualPositive: boolean): bool
 
     if(prediction === actualPositive) {
         return true;
+
     } else {
         return false;
     }
@@ -15,17 +16,13 @@ function isCorrectPrediction(prediction: boolean, actualPositive: boolean): bool
 function getPredictionResult(prediction: boolean, actualPositive: boolean): string {
     if (prediction === true && actualPositive === true) {
         return "TRUE POSITIVE";
-    }
-
-    if (prediction === false && actualPositive === false) {
+    } else if (prediction === false && actualPositive === false) {
         return "TRUE NEGATIVE";
-    }
 
-    if (prediction === true && actualPositive === false) {
+    } else if (prediction === true && actualPositive === false) {
         return "FALSE POSITIVE";
-    }
 
-    if (prediction === false && actualPositive === true) {
+    } else {
         return "FALSE NEGATIVE";
     }
 }
@@ -34,13 +31,13 @@ function getPredictionResult(prediction: boolean, actualPositive: boolean): stri
 function getErrorType(prediction: boolean, actualPositive: boolean): string {
     if (prediction === true && actualPositive === false) {
         return "TYPE I ERROR";
-    }
 
-    if (prediction === false && actualPositive === false) {
+    } else if(prediction === false && actualPositive === true) {
         return "TYPE II ERROR";
-    }
 
-    return "NO ERROR";
+    } else {
+        return "NO ERROR";
+    }
 }
 
 
