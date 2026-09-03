@@ -42,5 +42,11 @@ function getErrorType(prediction: boolean, actualPositive: boolean): string {
 
 
 
-///issues ! why do i have an error in string type in the function!?
+const prediction = true;
+const actualPositive = false;
 
+const predictionResult = getPredictionResult(prediction, actualPositive);
+const errorType = getErrorType(prediction, actualPositive);
+
+console.log(`Prediction: ${predictionResult}`);
+console.log(`Error Type: ${errorType}`);
