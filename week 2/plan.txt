@@ -1,0 +1,51 @@
+WEEK 2 — THE TYPE SYSTEM
+
+DAY 1 — Type inference vs explicit types
+- inferred types
+- explicit annotations
+- when TypeScript figures the type out itself
+- when you should write the type yourself
+- coding drills
+
+DAY 2 — type aliases
+- type
+- creating your own named types
+- using aliases with variables
+- using aliases with functions
+- coding drills
+
+DAY 3 — interfaces
+- interface
+- defining object shapes
+- required properties
+- type vs interface basics
+- coding drills
+
+DAY 4 — optional properties
+- ?
+- required vs optional data
+- checking optional values
+- coding drills
+
+DAY 5 — union types
+- string | number
+- multiple allowed types
+- narrowing with typeof
+- coding drills
+
+DAY 6 — literal types
+- exact allowed values
+- "pending" | "approved" | "rejected"
+- combining literals with functions
+- coding drills
+
+DAY 7 — Mini project
+- combine Week 2 concepts
+- type aliases
+- interfaces
+- optional properties
+- unions
+- literal types
+- hard review
+
+
