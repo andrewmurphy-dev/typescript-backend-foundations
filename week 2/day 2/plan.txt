@@ -1,0 +1,26 @@
+WEEK 2 — DAY 2
+
+Topic 1
+- What a type alias is
+
+Topic 2
+- Creating a simple type alias
+
+Topic 3
+- Using a type alias with variables
+
+Topic 4
+- Creating object types
+
+Topic 5
+- Using object types in functions
+
+Topic 6
+- Returning typed objects
+
+Topic 7
+- Hard coding practice
+
+Topic 8
+- End-of-day review
+
