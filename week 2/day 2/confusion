@@ -1,0 +1,28 @@
+//functions are a little hard to get used too 
+
+
+
+type UserProfile = {
+    username: string;
+    age: number;
+    isAdmin: boolean
+};
+
+
+
+function showUserProfile(profile: UserProfile): void {
+    console.log(profile.username);
+    console.log(profile.age);
+    console.log(profile.isAdmin);
+};
+
+
+const profile: UserProfile = {
+    username: "Andrew",
+    age: 29,
+    isAdmin: true
+};
+
+
+showUserProfile(profile);
+
