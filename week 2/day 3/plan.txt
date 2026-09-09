@@ -1,0 +1,25 @@
+DAY 3 — INTERFACES
+
+Topic 1
+- What an interface is
+
+Topic 2
+- Defining object shapes
+
+Topic 3
+- Required properties
+
+Topic 4
+- Using interfaces with variables
+
+Topic 5
+- Using interfaces in functions
+
+Topic 6
+- type vs interface basics
+
+Topic 7
+- Hard coding drills
+
+Topic 8
+- End-of-day review
