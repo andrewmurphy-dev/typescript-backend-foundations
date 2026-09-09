@@ -1,0 +1,52 @@
+
+
+
+interface User {
+    username: string;
+    age: number;
+    active: boolean;
+}
+
+
+
+this is the shape below !
+
+
+User
+↓
+{
+    username: string
+    age: number
+    active: boolean
+}
+
+
+what happens if you forget a property !?
+
+
+const user: User = {
+    username: "Andrew",
+    age: 29
+};
+
+
+
+it gives you a type error 
+
+TypeScript sees:
+
+User requires:
+username ✅
+age ✅
+active ❌ missing
+
+
+
+
+
+
+
+
+so remmebeer you make the object rules with interface and typescript compares those rules to your code 
+
+if it doesnt match , error 
