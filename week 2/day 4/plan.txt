@@ -1,0 +1,25 @@
+DAY 4 — OPTIONAL PROPERTIES
+
+Topic 1
+- What an optional property is
+
+Topic 2
+- ? syntax
+
+Topic 3
+- Required vs optional properties
+
+Topic 4
+- Optional properties in interfaces
+
+Topic 5
+- Optional properties in type aliases
+
+Topic 6
+- Using optional properties in functions
+
+Topic 7
+- Hard coding drills
+
+Topic 8
+- End-of-day review
