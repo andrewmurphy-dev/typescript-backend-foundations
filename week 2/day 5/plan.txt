@@ -1,0 +1,25 @@
+DAY 5 — UNION TYPES
+
+Topic 1
+- What a union type is
+
+Topic 2
+- Using | syntax
+
+Topic 3
+- Union types with variables
+
+Topic 4
+- Union types in function parameters
+
+Topic 5
+- Union types as return types
+
+Topic 6
+- Union types inside object types / interfaces
+
+Topic 7
+- Hard coding drills
+
+Topic 8
+- End-of-day review
