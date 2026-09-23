@@ -1,0 +1,25 @@
+DAY 6 — LITERAL TYPES
+
+Topic 1
+- What a literal type is
+
+Topic 2
+- String literal types
+
+Topic 3
+- Number literal types
+
+Topic 4
+- Literal unions
+
+Topic 5
+- Literal types in function parameters
+
+Topic 6
+- Literal types in interfaces / type aliases
+
+Topic 7
+- Hard coding drills
+
+Topic 8
+- End-of-day review
