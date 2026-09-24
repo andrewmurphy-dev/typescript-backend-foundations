@@ -1,0 +1,14 @@
+WEEK 2 — DAY 7 REVISION
+
+1. Type aliases
+2. Object type aliases
+3. Interfaces
+4. Required properties
+5. Optional properties ?
+6. Union types |
+7. Union types in functions
+8. Union types in objects
+9. Literal types
+10. Literal unions
+11. Literal types in functions
+12. Combining everything
