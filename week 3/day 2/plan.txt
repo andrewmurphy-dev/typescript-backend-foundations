@@ -1,0 +1,26 @@
+WEEK 3 — DAY 2
+
+Topic 1
+- while loops
+
+Topic 2
+- break and continue
+
+Topic 3
+- typed arrays + loops
+- number[]
+- string[]
+- boolean[]
+
+Topic 4
+- harder loop logic
+- counters
+- accumulators
+- conditions
+- functions
+
+End:
+- 5 hard coding problems
+- 1 final ML challenge
+
+
