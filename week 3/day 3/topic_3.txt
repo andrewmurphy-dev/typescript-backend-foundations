@@ -1,0 +1,10 @@
+//find() 
+
+//.find() searches though an array and returns the first item that matches the condition !
+
+
+scores.find((score) => score >= 0.80);
+
+this returns 1 atching item not more 
+
+and if nothing matches , it returns undefined 
