@@ -1,0 +1,21 @@
+//filter()
+
+//we filter data based on the condition !
+
+const num = number[] = [0.91, 0.42, 0.88, 0.33]
+
+const x = num.filter((z) => {
+    return z >= 0.80
+});
+
+
+for filter() we do not use if 
+
+this returns a new array 
+
+
+what is the difference between map() , filter() 
+
+map() change , manipulate data 
+
+filter() choose which data stays !
