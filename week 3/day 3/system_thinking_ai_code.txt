@@ -1,0 +1,358 @@
+WEEK 3 — DAY 3
+SYSTEM THINKING + READING AI CODE
+
+
+GOAL
+
+When AI writes code for me, I should not only ask:
+
+"What does this line do?"
+
+I should also ask:
+
+"What role does this code have in the system?"
+
+
+--------------------------------------------------
+1. READ THE FUNCTION SIGNATURE FIRST
+--------------------------------------------------
+
+Example:
+
+function getPassingScores(scores: number[]): number[]
+
+
+Ask:
+
+INPUT?
+- number[]
+
+OUTPUT?
+- number[]
+
+So before reading the body I already know:
+
+"This function receives an array of numbers and returns an array of numbers."
+
+
+--------------------------------------------------
+2. IDENTIFY THE MAIN OPERATION
+--------------------------------------------------
+
+Common patterns:
+
+.map()
+→ transforms every item
+→ returns a new array
+
+.filter()
+→ keeps matching items
+→ returns a new array
+
+.find()
+→ finds the first matching item
+→ returns one item or undefined
+
+for / for...of
+→ processes items repeatedly
+
+if / else
+→ makes a decision
+
+return
+→ sends a result out of the function
+
+interface
+→ describes the required shape of data
+
+
+--------------------------------------------------
+3. EXPLAIN THE FUNCTION IN ONE SENTENCE
+--------------------------------------------------
+
+AI writes:
+
+function getPassingScores(scores: number[]): number[] {
+    return scores.filter((score) => {
+        return score >= 0.80;
+    });
+}
+
+
+I should be able to say:
+
+"This function receives model scores and returns only scores that are 0.80 or higher."
+
+
+If I cannot explain the function in one sentence,
+I probably do not understand it yet.
+
+
+--------------------------------------------------
+4. FOLLOW THE DATA
+--------------------------------------------------
+
+Example:
+
+const scores = [0.72, 0.91, 0.65, 0.88];
+
+const passing = getPassingScores(scores);
+
+
+Think:
+
+scores
+↓
+getPassingScores()
+↓
+filter()
+↓
+check every score
+↓
+keep scores >= 0.80
+↓
+[0.91, 0.88]
+↓
+passing
+
+
+Always ask:
+
+WHERE DID THE DATA COME FROM?
+
+WHAT HAPPENS TO IT?
+
+WHERE DOES IT GO NEXT?
+
+
+--------------------------------------------------
+5. SYSTEM DESIGN VIEW
+--------------------------------------------------
+
+Imagine a backend API:
+
+CLIENT
+↓
+ROUTE
+↓
+SERVICE
+↓
+DATABASE
+↓
+SERVICE
+↓
+RESPONSE
+↓
+CLIENT
+
+
+Example:
+
+GET /models
+
+Client
+↓
+Backend receives request
+↓
+Database returns model records
+↓
+Backend filters / transforms data
+↓
+Backend sends response
+
+
+AI might write:
+
+const models = await repository.getModels();
+
+const passingModels = models.filter((model) => {
+    return model.accuracy >= 0.80;
+});
+
+const response = passingModels.map((model) => {
+    return {
+        name: model.name,
+        accuracy: model.accuracy
+    };
+});
+
+
+I should see:
+
+DATABASE DATA
+↓
+filter
+↓
+only passing models
+↓
+map
+↓
+convert to response format
+↓
+CLIENT
+
+
+--------------------------------------------------
+6. QUESTIONS TO ASK ABOUT AI-WRITTEN CODE
+--------------------------------------------------
+
+For every important function ask:
+
+1. What is the input?
+
+2. What is the output?
+
+3. What data is changing?
+
+4. Does it have a side effect?
+
+5. What can fail?
+
+6. Where does it belong in the system?
+
+
+--------------------------------------------------
+7. SIMPLE EXAMPLE
+--------------------------------------------------
+
+AI writes:
+
+function convertToPercentages(scores: number[]): number[] {
+    return scores.map((score) => {
+        return score * 100;
+    });
+}
+
+
+My explanation:
+
+INPUT
+number[]
+
+OPERATION
+map
+
+WHAT MAP DOES
+transforms every value
+
+TRANSFORMATION
+score * 100
+
+OUTPUT
+number[]
+
+ONE-SENTENCE EXPLANATION
+"Takes decimal model scores and converts every score into a percentage."
+
+
+--------------------------------------------------
+8. ANOTHER EXAMPLE
+--------------------------------------------------
+
+AI writes:
+
+function findFailure(scores: number[]): number | undefined {
+    return scores.find((score) => {
+        return score < 0.50;
+    });
+}
+
+
+My explanation:
+
+INPUT
+number[]
+
+OPERATION
+find
+
+CONDITION
+score < 0.50
+
+OUTPUT
+number OR undefined
+
+ONE-SENTENCE EXPLANATION
+"Returns the first score below 0.50, or undefined if no failing score exists."
+
+
+--------------------------------------------------
+9. WHAT I SHOULD NOT DO
+--------------------------------------------------
+
+Do not look at AI code and say:
+
+"It works, so it's fine."
+
+
+I need to be able to explain:
+
+INPUT
+↓
+LOGIC
+↓
+OUTPUT
+
+
+And then:
+
+WHERE DOES THIS FUNCTION SIT IN THE SYSTEM?
+
+
+--------------------------------------------------
+10. DAY 3 CHECKLIST
+--------------------------------------------------
+
+Before accepting AI-written code:
+
+[ ] I understand the function parameters
+
+[ ] I understand the return type
+
+[ ] I know what map/filter/find is doing
+
+[ ] I can follow the data through the function
+
+[ ] I can explain the function in one sentence
+
+[ ] I know what happens if the data is unexpected
+
+[ ] I understand where this code belongs in the larger system
+
+
+FINAL MENTAL MODEL
+
+CODE LEVEL:
+
+input
+↓
+logic
+↓
+output
+
+
+SYSTEM LEVEL:
+
+request/data source
+↓
+backend component
+↓
+business logic
+↓
+database/external service
+↓
+response
+
+
+MY JOB WHEN USING AI:
+
+AI can write the code.
+
+I must be able to:
+
+READ IT
+EXPLAIN IT
+TEST IT
+DEBUG IT
+UNDERSTAND WHY IT EXISTS
+UNDERSTAND WHERE IT FITS

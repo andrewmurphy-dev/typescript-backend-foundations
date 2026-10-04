@@ -1,0 +1,67 @@
+//topic 1 
+
+
+// what is .map() 
+
+//this is a built in array method in typescript
+
+const scores: number[] = [10, 20, 30]
+
+
+
+const doubledScores = scores.map((score) => {
+    return score * 2
+});
+
+
+what is => ?
+
+this is syntax for an arrow function 
+
+
+
+
+(score) => {
+    return score * 2;
+}
+
+basically means take score , run this code and return something 
+
+(score) => {} → function you give to map
+
+
+
+const num = scores.map((score) => {
+    return score * 2
+});
+
+num holds a reference to the new returned array !
+
+
+const two = scores.map((score) => { return score * 2});
+
+so you can say score is something like a tracking variable for the current item 
+
+when is this used in real world !??
+
+
+
+const users = [
+    { id: 1, name: "Andrew", passwordHash: "abc123" },
+    { id: 2, name: "Bob", passwordHash: "xyz999" }
+];
+
+
+
+const user = users.map((ret) {
+    return {
+        id: user.id,
+        name: user.name
+    };
+});
+
+
+“Take every item in this array and transform it into a new value.”
+
+so remember map() we make a sort of tacking variable and go through it and we can manipulate the data 
+or you can say transform it into a new value !
