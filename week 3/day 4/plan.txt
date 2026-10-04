@@ -1,0 +1,17 @@
+WEEK 3 — DAY 4
+
+Topic 1
+- Object destructuring
+
+Topic 2
+- Array destructuring
+
+Topic 3
+- Spread operator (...)
+
+Topic 4
+- Combining destructuring + spread in functions
+
+Finish:
+- 5 hard coding questions
+- 1 backend/ML-style challenge
