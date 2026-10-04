@@ -1,0 +1,501 @@
+WEEK 3 — DAY 4
+SYSTEM THINKING + READING AI CODE
+
+GOAL
+
+If Cursor writes code using:
+
+- object destructuring
+- array destructuring
+- spread operator
+- functions that return updated objects
+
+I should be able to explain:
+
+1. What data exists before
+2. What is being copied
+3. What is being extracted
+4. What is being changed
+5. Whether the original data is changed
+6. What new value is returned
+
+
+--------------------------------------------------
+1. OBJECT DESTRUCTURING
+--------------------------------------------------
+
+Cursor writes:
+
+const { name, accuracy, trained } = model;
+
+
+I should read this as:
+
+"Take these properties out of the model object
+and create variables with the same names."
+
+
+BEFORE:
+
+model = {
+    name: "ClassifierV1",
+    accuracy: 0.91,
+    trained: true
+}
+
+
+AFTER:
+
+name = "ClassifierV1"
+accuracy = 0.91
+trained = true
+
+
+SYSTEM QUESTION:
+
+Why is the code destructuring?
+
+Possible reason:
+
+- cleaner access to properties
+- avoids repeating model.name
+- function only cares about certain fields
+
+
+--------------------------------------------------
+2. ARRAY DESTRUCTURING
+--------------------------------------------------
+
+Cursor writes:
+
+const [first, second] = scores;
+
+
+I should read this as:
+
+"Take values from the array based on position."
+
+
+scores:
+
+[0.91, 0.82, 0.77]
+
+
+AFTER:
+
+first = 0.91
+second = 0.82
+
+
+IMPORTANT:
+
+OBJECT DESTRUCTURING
+→ matches property names
+
+ARRAY DESTRUCTURING
+→ matches positions
+
+
+SYSTEM QUESTION:
+
+Does this code assume the array always has enough items?
+
+What happens if the array is empty?
+
+
+--------------------------------------------------
+3. SPREAD WITH ARRAYS
+--------------------------------------------------
+
+Cursor writes:
+
+const updatedScores = [...scores, 0.99];
+
+
+I should read this as:
+
+"Create a NEW array.
+Copy all values from scores.
+Then add 0.99."
+
+
+BEFORE:
+
+scores
+→ [0.72, 0.81, 0.94]
+
+
+AFTER:
+
+scores
+→ [0.72, 0.81, 0.94]
+
+updatedScores
+→ [0.72, 0.81, 0.94, 0.99]
+
+
+IMPORTANT:
+
+The original scores variable is NOT reassigned.
+
+A new array is created.
+
+
+SYSTEM QUESTION:
+
+Why create a new array instead of modifying the old one?
+
+Possible reasons:
+
+- avoid accidental mutation
+- easier to reason about
+- safer when data is shared
+- common pattern in application code
+
+
+--------------------------------------------------
+4. SPREAD WITH OBJECTS
+--------------------------------------------------
+
+Cursor writes:
+
+const updatedModel = {
+    ...model,
+    accuracy: 0.95
+};
+
+
+I should read this as:
+
+"Create a NEW object.
+Copy everything from model.
+Then replace accuracy with 0.95."
+
+
+BEFORE:
+
+model = {
+    name: "ClassifierV1",
+    accuracy: 0.91,
+    trained: true
+}
+
+
+AFTER:
+
+model
+→ accuracy 0.91
+
+updatedModel
+→ accuracy 0.95
+
+
+IMPORTANT:
+
+Order matters.
+
+
+This:
+
+{
+    ...model,
+    accuracy: 0.95
+}
+
+means:
+
+copy model first
+then overwrite accuracy
+
+
+But this:
+
+{
+    accuracy: 0.95,
+    ...model
+}
+
+could overwrite 0.95 with model.accuracy.
+
+
+SYSTEM QUESTION:
+
+Which properties are being preserved?
+
+Which properties are being replaced?
+
+
+--------------------------------------------------
+5. READING A FUNCTION WITH SPREAD
+--------------------------------------------------
+
+Cursor writes:
+
+function updateAccuracy(
+    model: Model,
+    newAccuracy: number
+): Model {
+
+    return {
+        ...model,
+        accuracy: newAccuracy
+    };
+}
+
+
+FIRST READ THE SIGNATURE:
+
+INPUT:
+
+model: Model
+newAccuracy: number
+
+
+OUTPUT:
+
+Model
+
+
+Then read the body:
+
+...model
+→ copy existing properties
+
+accuracy: newAccuracy
+→ replace one property
+
+
+ONE-SENTENCE EXPLANATION:
+
+"This function returns a new Model object
+with the same data except for an updated accuracy."
+
+
+--------------------------------------------------
+6. FOLLOW THE DATA
+--------------------------------------------------
+
+Example:
+
+const model: Model = {
+    name: "ClassifierV1",
+    accuracy: 0.91,
+    trained: true
+};
+
+const updatedModel = updateAccuracy(model, 0.97);
+
+
+I should mentally follow:
+
+model
+↓
+passed into updateAccuracy()
+↓
+model properties copied
+↓
+accuracy replaced with 0.97
+↓
+new Model object returned
+↓
+stored in updatedModel
+
+
+FINAL STATE:
+
+model.accuracy
+→ 0.91
+
+updatedModel.accuracy
+→ 0.97
+
+
+--------------------------------------------------
+7. QUESTIONS TO ASK CURSOR CODE
+--------------------------------------------------
+
+If Cursor generates code using destructuring or spread, ask:
+
+1. What is the original object/array?
+
+2. Is this code extracting values or creating new data?
+
+3. Is the original being mutated?
+
+4. Is a new object/array being created?
+
+5. Which properties are copied?
+
+6. Which properties are overwritten?
+
+7. What does the function return?
+
+8. Where does the returned value go?
+
+9. Could any property be missing?
+
+10. Does property order matter?
+
+
+--------------------------------------------------
+8. REAL BACKEND EXAMPLE
+--------------------------------------------------
+
+Cursor writes:
+
+const user = await repository.getUser(id);
+
+const updatedUser = {
+    ...user,
+    lastLogin: new Date()
+};
+
+await repository.save(updatedUser);
+
+
+READ IT AS:
+
+DATABASE
+↓
+get user
+↓
+copy user object
+↓
+replace/add lastLogin
+↓
+save updated object
+↓
+DATABASE
+
+
+SYSTEM THINKING:
+
+Why create updatedUser?
+
+Why not mutate user directly?
+
+What happens if user is undefined?
+
+What happens if save fails?
+
+Should lastLogin be updated in the database directly?
+
+Does this function belong in the route,
+service,
+or repository?
+
+
+--------------------------------------------------
+9. REAL ML EXAMPLE
+--------------------------------------------------
+
+Cursor writes:
+
+const result = {
+    label: "POSITIVE",
+    score: 0.82,
+    confident: true
+};
+
+const updatedResult = {
+    ...result,
+    score: 0.95
+};
+
+
+READ IT AS:
+
+original result
+↓
+copy all fields
+↓
+replace score
+↓
+new result object
+
+
+ONE-SENTENCE EXPLANATION:
+
+"Creates a new prediction result while preserving
+the label and confidence and updating only the score."
+
+
+--------------------------------------------------
+10. DAY 4 AI CODE CHECKLIST
+--------------------------------------------------
+
+Before accepting Cursor code:
+
+[ ] I know what object/array exists first
+
+[ ] I know whether destructuring is being used
+
+[ ] I know what variables destructuring creates
+
+[ ] I know whether spread creates a new object/array
+
+[ ] I know whether the original data stays unchanged
+
+[ ] I know which property is overwritten
+
+[ ] I know what the function returns
+
+[ ] I know where the returned value is stored
+
+[ ] I can explain the code in one sentence
+
+
+FINAL MENTAL MODEL
+
+
+DESTRUCTURING
+
+object/array
+↓
+pull values out
+↓
+create variables
+
+
+SPREAD
+
+old object/array
+↓
+copy values
+↓
+create new object/array
+
+
+FUNCTION + SPREAD
+
+input object
+↓
+copy object
+↓
+change selected property
+↓
+return new object
+
+
+WHEN CURSOR WRITES CODE:
+
+DO NOT JUST ASK:
+
+"Does this compile?"
+
+
+ASK:
+
+"What is the input?"
+
+"What is copied?"
+
+"What is changed?"
+
+"What stays unchanged?"
+
+"What is returned?"
+
+"Where does it go next?"
+
+"Why does this belong here in the system?"
