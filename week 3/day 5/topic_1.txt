@@ -1,0 +1,42 @@
+//how do we import modules in ts!???
+
+lets say you have 1 file 
+
+called 
+
+
+// math.ts
+
+export function add(a: number, b: number): number {
+    return a + b;
+}
+
+
+
+
+
+then another file called 
+
+
+// main.ts
+
+import { add } from "./math";
+
+const result = add(10, 5);
+
+console.log(result);
+
+
+
+
+
+
+
+so it could be interface , function 
+
+we just if we want to use it in other files we would use export before
+
+
+
+
+You don’t import “the whole file” by default. You usually import the specific exported things you need from that file.
