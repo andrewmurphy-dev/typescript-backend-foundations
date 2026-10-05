@@ -1,0 +1,16 @@
+Topic 1
+- Why modules exist
+
+Topic 2
+- export
+
+Topic 3
+- import
+
+Topic 4
+- splitting code across files
+
+Finish:
+- 3 coding questions
+- 1 small backend-style challenge
+
