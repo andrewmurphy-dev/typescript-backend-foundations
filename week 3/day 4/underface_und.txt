@@ -1,0 +1,22 @@
+what is interface in ts!??
+
+
+
+interface User {
+    name: string;
+    age: number;
+    isAdmin: boolean;
+}
+
+this describes the shap@e the object must have !
+
+
+
+const user: User = {
+    name: "Andy",
+    age: 25,
+    isAdmin: true
+};
+
+remmeber ? means optional 
+
