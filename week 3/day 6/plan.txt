@@ -1,0 +1,19 @@
+WEEK 3 — DAY 6
+
+Topic 1
+- .some()
+
+Topic 2
+- .every()
+
+Topic 3
+- chaining array methods
+- filter() + map()
+- find() where appropriate
+
+Topic 4
+- typed functions using array methods
+
+Finish:
+- 5 hard coding problems
+- 1 backend/ML-style challenge
