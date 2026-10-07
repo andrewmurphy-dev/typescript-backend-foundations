@@ -1,0 +1,30 @@
+remmeber these 
+
+
+
+for (const num of numbers)
+
+
+
+
+what is an accumilator ??
+
+this is a tracking variable that tracks a running total or result 
+
+for example 
+
+let total:umber = 0;
+
+
+
+
+return losses.map((loss) => {
+        return loss * 100;
+    });
+
+
+
+this is the general structure 
+
+
+

@@ -1,0 +1,14 @@
+WEEK 3 — DAY 7 REVISION
+
+1. for / for...of / while
+2. break / continue
+3. counters + accumulators
+4. map()
+5. filter()
+6. find()
+7. some() / every()
+8. destructuring
+9. spread
+10. import / export
+11. chaining array methods
+12. combining everything
