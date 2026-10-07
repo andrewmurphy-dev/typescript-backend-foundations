@@ -1,0 +1,119 @@
+//revision questions 
+
+
+//question 1 
+function calculateAccuracy(accuracies: number[]): number {
+    let total: number = 0;
+    for (const num of accuracies) {
+        total = total + num;
+    }
+
+    return total/accuracies.length;
+}
+
+
+
+const accuracies: number[] = [0.80, 0.90, 0.70, 1.00];
+const result = calculateAccuracy(accuracies);
+console.log(result)
+
+
+
+
+
+//question 2 
+
+
+function countValidPassingScores(scores: number[]): number {
+    let total: number = 0;
+    for (const score of scores) {
+        if (score < 0 || score > 1)
+            continue
+
+        if (score >= 0.80) {
+            total = total + 1  
+        }    
+    } 
+    
+    return total
+}
+
+
+
+
+const scores: number[] = [0.91, -0.2, 0.75, 1.4, 0.88, 0.95];
+const result1 = countValidPassingScores(scores);
+console.log(result1)
+
+
+//logicaklly when looping through a number we cant have below a number and above a number , we need OR
+//to use OR , we use || 
+
+
+
+
+//question 3
+
+
+function findFirstCriticalLoss(losses: number[]): number {
+    let result:number = 0;
+    for (const loss of losses) {
+        if (loss < 0.40) {
+            result = loss
+            break
+        }
+    }
+
+    return result 
+
+}
+
+
+const losses: number[] = [0.91, -0.2, 0.75, 1.4, 0.88, 0.95];
+const result2 = findFirstCriticalLoss(losses);
+console.log(result2)
+
+
+
+
+
+//question 4 
+
+function countCriticalLosses(losses: number[]): number {
+    let total: number = 0;
+    for (const loss of losses) {
+        if (loss < 0.40) {
+            total = total + 1
+        }
+    }
+
+    return total
+}
+
+
+
+
+//question 5 
+
+function convertLossesToPercent(lossess: number[]): number[] {
+    return losses.map((loss) => {
+        return loss * 100;
+    });
+}
+
+
+
+const lossess: number[] = [0.82, 0.35, 0.61, 0.24, 0.48]
+const result5 = convertLossesToPercent(lossess);
+console.log(result5)
+
+
+//question 6 
+
+
+function getCriticalLosses(losses: number[]): number[] {
+
+}
+
+
+

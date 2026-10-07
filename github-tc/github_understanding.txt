@@ -1,0 +1,11 @@
+your files
+↓
+git add
+↓
+git commit
+↓
+LOCAL Git repository only
+↓
+git push
+↓
+GitHub
