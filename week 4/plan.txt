@@ -1,0 +1,19 @@
+WEEK 4 — DAY 1
+
+Topic 1
+- null
+
+Topic 2
+- undefined
+
+Topic 3
+- handling missing values inside functions
+
+Topic 4
+- functions that may return a value OR nothing
+
+Finish:
+- 5 hard coding questions
+- 1 backend-style challenge
+
+
