@@ -143,3 +143,57 @@ console.log(result10)
 //question 8 
 
 
+function checkModelScores(scores: number[]): boolean {
+    return scores.every((score) => {
+        if (score >= 0 && score <= 1) {
+            return true
+        } else {
+            return false;
+        }      
+    }); 
+
+
+    }
+
+
+
+
+//so every() auto returns false if its not true !
+
+
+
+
+
+//question 9 
+
+
+interface ModelResult {
+    name: string;
+    accuracy: number;
+    passed: boolean;
+}
+
+
+function printModelResult(result: ModelResult): void {
+    const {name, accuracy, passed} = result;
+    console.log(name)
+    console.log(accuracy)
+    console.log(passed)
+}
+
+
+const result: ModelResult = {
+    name: "ClassifierV1",
+    accuracy: 0.91,
+    passed: true
+};
+
+const Result14 = printModelResult(result)
+
+console.log(Result14)
+
+
+// this part is wrong , the last part cause of void andrew !
+//so all u need is 
+
+printModelResult(result)
