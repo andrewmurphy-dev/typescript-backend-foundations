@@ -111,9 +111,89 @@ console.log(result5)
 //question 6 
 
 
-function getCriticalLosses(losses: number[]): number[] {
-
+function getCriticalLosses(loss: number[]): number[] {
+    return loss.filter((los) => {
+        return los < 0.40;
+    });
 }
 
 
 
+
+const loss: number[] = [0.91, 0.72, 0.55, 0.38, 0.21];
+const result8 = getCriticalLosses(loss)
+console.log(result8)
+
+
+//question 7 
+
+function findFirstCriticalLoss(losses: number[]): number | undefined {
+    return losses.find((loss) => {
+        return loss < 0.40;
+    });
+}
+
+
+
+const losses: number[] = [0.91, 0.72, 0.55, 0.38, 0.21];
+const result10 = findFirstCriticalLoss(losses)
+console.log(result10)
+
+
+//question 8 
+
+
+function checkModelScores(scores: number[]): boolean {
+    return scores.every((score) => {
+        if (score >= 0 && score <= 1) {
+            return true
+        } else {
+            return false;
+        }      
+    }); 
+
+
+    }
+
+
+
+
+//so every() auto returns false if its not true !
+
+
+
+
+
+//question 9 
+
+
+interface ModelResult {
+    name: string;
+    accuracy: number;
+    passed: boolean;
+}
+
+
+function printModelResult(result: ModelResult): void {
+    const {name, accuracy, passed} = result;
+    console.log(name)
+    console.log(accuracy)
+    console.log(passed)
+}
+
+
+const result: ModelResult = {
+    name: "ClassifierV1",
+    accuracy: 0.91,
+    passed: true
+};
+
+const Result14 = printModelResult(result)
+
+console.log(Result14)
+
+
+// this part is wrong , the last part cause of void andrew !
+//so all u need is 
+
+printModelResult(result)
