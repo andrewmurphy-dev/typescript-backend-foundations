@@ -111,9 +111,35 @@ console.log(result5)
 //question 6 
 
 
-function getCriticalLosses(losses: number[]): number[] {
-
+function getCriticalLosses(loss: number[]): number[] {
+    return loss.filter((los) => {
+        return los < 0.40;
+    });
 }
 
+
+
+
+const loss: number[] = [0.91, 0.72, 0.55, 0.38, 0.21];
+const result8 = getCriticalLosses(loss)
+console.log(result8)
+
+
+//question 7 
+
+function findFirstCriticalLoss(losses: number[]): number | undefined {
+    return losses.find((loss) => {
+        return loss < 0.40;
+    });
+}
+
+
+
+const losses: number[] = [0.91, 0.72, 0.55, 0.38, 0.21];
+const result10 = findFirstCriticalLoss(losses)
+console.log(result10)
+
+
+//question 8 
 
 
